@@ -1,0 +1,7 @@
+import cv2
+
+image=cv2.imread("file_path/image_name.image_extention") #read the existing image
+
+cv2.imshow("image title", image) #show the image
+
+cv2.waitKey(0) #keep the screen on until you turn it off
