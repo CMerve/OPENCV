@@ -1,0 +1,13 @@
+import cv2
+import numpy as np
+
+/* create black image 400x400 */
+image = np.zeros ((400,400)) # 0=black point, 1=white point for black&white image
+cv2.imshow("Black Image",image)
+
+/* coloring a specific part of the photo */
+imageC =np.zeros((400,400,3),np.uint8)
+imageC[height:width]=255,0,0 #blue
+cv2.imshow("Colored Image",imageC)
+
+cv2.waitKey(0)
