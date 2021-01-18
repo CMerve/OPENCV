@@ -1,0 +1,9 @@
+import cv2
+
+image=cv2.imread("file_path/image_name.image_extension")
+
+image.shape # return (x,y,BGR_channel)
+
+imageResize=cv2.resize(image,(width, height))
+
+imageCropped=image[height_start_point : height_end_point , width_start_point : width_end_point]
