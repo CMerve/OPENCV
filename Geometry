@@ -1,0 +1,23 @@
+import cv2
+
+image = cv2.imread("file_path/image_name.image_extension")
+
+/* green line */
+cv2.line(image,(startH,startW),(endH,endW),(0,255,0),3)
+cv2.imshow("Green Line", image)
+
+/* cross to cross green line */
+cv2.line(image,(0,0),(image.shape[1],image.shape[0]),(0,255,0),3) 
+cv2.imshow("Cross Green Line", image)
+
+/* green square drawing */
+cv2.rectangle(img,(startH,startW),(endH,endW),(0,255,0),2) #two dimensional
+cv2.imshow("Green Square", image)
+
+/* green square drawing */
+cv2.rectangle(img,(startH,startW),(endH,endW),(0,255,0),cv2.FILLED) #it's full
+cv2.imshow("Green Square Filled", image)
+
+/* green circle drawing */
+cv2.circle(img,(400,50),30,(255,255,0),5)
+cv2.imshow("Green Circle", image)
