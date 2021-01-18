@@ -1,0 +1,9 @@
+import cv2
+
+capture=cv2.VideoCapture("file_path/video_name.video_extension")
+/* don't forget video is photo series, let's read one by one */
+while True:
+  success, image=capture.read() # 'success' is a boolean value and 'image' is photo array 
+  cv2.imshow("Video", image) # video is playing
+  if cv2.waitKey(1) & 0xFF == ord('q'): # until you press the q key
+    break
