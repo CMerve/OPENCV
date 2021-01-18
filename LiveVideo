@@ -1,0 +1,14 @@
+import cv2
+
+capture=cv2.VideoCapture(0) # zero is default camera on your computer, if you want to external camera on usb, you should use to one
+
+/* we need to set video size and brightness */
+capture.set(3,640) #width id is three
+capture.set(4,480) #height id is four
+capture.set(10,150) #brightness id is ten
+
+while True:
+  success, image= capture.read()
+  cv2.imshow("Video", image)
+  if cv2.waitKey(1) & 0xFF == ord('q'):// q tuşuna basınca ekranı kapatır
+		break 
