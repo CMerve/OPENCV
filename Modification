@@ -1,0 +1,26 @@
+import cv2
+import numpy as np
+
+image=cv2.imread("file_path/image_name.image_extension")
+
+/* convert RGB to Gray and show image */
+imageGray =cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+cv2.imshow("Gray Image",imageGray)
+
+/* Gaussian Blur and show image */
+imageGaussian =cv2.GaussianBlur(imageGray,(5,5),5)
+cv2.imshow("Gaussian Image",imageGaussian)
+
+/* Canny and show image */
+imageCanny =cv2.Canny(image,100,100)
+cv2.imshow("Canny Image",imageCanny)
+
+/* thickening and show image */
+kernel = np.ones((5,5),np.uint8) # we got the series as a single output
+imageCanny =cv2.Canny(image,100,100) #show detail
+imageDialation=cv2.dilate(imgCanny, kernel, iterations=1) # and thickening you can change 'iterations'
+cv2.imshow("Dialation Image",imageDialation)
+
+/* show wear on image and show image */
+imageEroded=cv2.erode(imageDialation,kernel,iteration=1)
+cv2.imshow("Wear Image",imageEroded)
