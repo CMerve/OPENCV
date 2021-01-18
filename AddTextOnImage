@@ -1,0 +1,7 @@
+import cv2
+
+image=cv2.imread("file_path/image_name.image_extension")
+
+cv2.putText(image,"OPEN",(startW,startH),cv2.FONT_HERSEY_COMPLEX,1,(0,200,150),1)
+cv2.imshow("IMAGE WITH TEXT",image)
+cv2.waitKey(0)
