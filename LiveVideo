@@ -10,5 +10,5 @@ capture.set(10,150) #brightness id is ten
 while True:
   success, image= capture.read()
   cv2.imshow("Video", image)
-  if cv2.waitKey(1) & 0xFF == ord('q'):// q tuşuna basınca ekranı kapatır
+  if cv2.waitKey(1) & 0xFF == ord('q'):// if you press q, close screen
 		break 
